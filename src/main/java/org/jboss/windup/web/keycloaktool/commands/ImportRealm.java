@@ -27,6 +27,7 @@ public class ImportRealm
         {
             RealmRepresentation realmRepresentation = JsonSerialization.readValue(realmJsonIS, RealmRepresentation.class);
             kc.realms().create(realmRepresentation);
+            LOG.info("Import complete!");
         }
         catch (Exception e)
         {

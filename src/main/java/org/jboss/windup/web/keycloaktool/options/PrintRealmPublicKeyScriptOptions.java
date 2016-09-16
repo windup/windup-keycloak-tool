@@ -6,9 +6,9 @@ import net.sourceforge.argparse4j.inf.Subparsers;
 /**
  * @author <a href="mailto:jesse.sightler@gmail.com">Jesse Sightler</a>
  */
-public class PrintRealmPublicKeyOptions
+public class PrintRealmPublicKeyScriptOptions
 {
-    public static final String PRINT_WINDUP_REALM_PUBLIC_KEY = "print-windup-realm-public-key";
+    public static final String PRINT_WINDUP_REALM_PUBLIC_KEY = "print-windup-realm-public-key-script";
     public static final String DEFAULT_KEYCLOAK_URL = "http://localhost:8080/auth";
     public static final String DEFAULT_PASSWORD = "password";
     public static final String DEFAULT_USERNAME = "admin";
@@ -17,7 +17,7 @@ public class PrintRealmPublicKeyOptions
     private String adminUser = DEFAULT_USERNAME;
     private String adminPassword = DEFAULT_PASSWORD;
 
-    public PrintRealmPublicKeyOptions(Subparsers subparsers)
+    public PrintRealmPublicKeyScriptOptions(Subparsers subparsers)
     {
         Subparser subparser = subparsers.addParser(PRINT_WINDUP_REALM_PUBLIC_KEY)
                     .help("Gets the public key for the windup realm (" + PRINT_WINDUP_REALM_PUBLIC_KEY + " --help for more options)");

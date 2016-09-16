@@ -14,7 +14,7 @@ public class Options
 
     private InitializeKeycloakOptions initializeKeycloakOptions;
     private CreateWindupRealmOptions createWindupRealmOptions;
-    private PrintRealmPublicKeyOptions printRealmPublicKeyOptions;
+    private PrintRealmPublicKeyScriptOptions printRealmPublicKeyScriptOptions;
     private CreateWindupUserOptions createWindupUserOptions;
 
     public Options(ArgumentParser parser)
@@ -28,7 +28,7 @@ public class Options
 
         this.initializeKeycloakOptions = new InitializeKeycloakOptions(subparsers);
         this.createWindupRealmOptions = new CreateWindupRealmOptions(subparsers);
-        this.printRealmPublicKeyOptions = new PrintRealmPublicKeyOptions(subparsers);
+        this.printRealmPublicKeyScriptOptions = new PrintRealmPublicKeyScriptOptions(subparsers);
         this.createWindupUserOptions = new CreateWindupUserOptions(subparsers);
     }
 
@@ -52,8 +52,8 @@ public class Options
         return createWindupUserOptions;
     }
 
-    public PrintRealmPublicKeyOptions getPrintRealmPublicKeyOptions()
+    public PrintRealmPublicKeyScriptOptions getPrintRealmPublicKeyScriptOptions()
     {
-        return printRealmPublicKeyOptions;
+        return printRealmPublicKeyScriptOptions;
     }
 }

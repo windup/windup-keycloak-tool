@@ -16,6 +16,6 @@ Usage
 
      ```java -jar target/windup-keycloak-tool.jar create-windup-user --newUserID windup --newUserPassword password --firstName Windup --lastName User```
 
- 4) Print the public key for the windup realm with no other output (server must be running):
+ 4) Prints a CLI script for adding the public key to the EAP/Wildfly system properties (server must be running):
 
-     ```java -jar target/windup-keycloak-tool.jar print-windup-realm-public-key```
+     ```java -jar target/windup-keycloak-tool.jar print-windup-realm-public-key-script```

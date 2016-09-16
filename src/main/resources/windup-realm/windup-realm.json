@@ -160,33 +160,7 @@
   "otpPolicyDigits" : 6,
   "otpPolicyLookAheadWindow" : 1,
   "otpPolicyPeriod" : 30,
-  "users" : [ {
-    "id" : "dabac4ed-fdfc-46b1-a4e6-dd1ed397112a",
-    "createdTimestamp" : 1473272186637,
-    "username" : "windup",
-    "enabled" : true,
-    "totp" : false,
-    "emailVerified" : false,
-    "firstName" : "Joe",
-    "lastName" : "Doe",
-    "email" : "",
-    "credentials" : [ {
-      "type" : "password",
-      "hashedSaltedValue" : "LuATzS3UCqW1diJC+sbwwLYYghpyO2igUExqWpi6Q04IxmEkVl2wCXXocyOrelmDcUVQz/6zjjXEfZ7wLUly+A==",
-      "salt" : "3Q6jJmeSUxerdXV318TC6g==",
-      "hashIterations" : 20000,
-      "counter" : 0,
-      "algorithm" : "pbkdf2",
-      "digits" : 0,
-      "createdDate" : 1473272376000
-    } ],
-    "requiredActions" : [ ],
-    "realmRoles" : [ "user", "offline_access" ],
-    "clientRoles" : {
-      "account" : [ "manage-account", "view-profile" ]
-    },
-    "groups" : [ ]
-  } ],
+  "users" : [ ],
   "clientScopeMappings" : {
     "realm-management" : [ {
       "client" : "admin-cli",

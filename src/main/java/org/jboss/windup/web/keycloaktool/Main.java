@@ -5,12 +5,12 @@ import java.io.File;
 import org.jboss.windup.web.keycloaktool.commands.AddUser;
 import org.jboss.windup.web.keycloaktool.commands.CreateWindupUser;
 import org.jboss.windup.web.keycloaktool.commands.ImportRealm;
-import org.jboss.windup.web.keycloaktool.commands.PrintRealmPublicKeyCommand;
+import org.jboss.windup.web.keycloaktool.commands.PrintRealmPublicKeyScriptCommand;
 import org.jboss.windup.web.keycloaktool.options.CreateWindupRealmOptions;
 import org.jboss.windup.web.keycloaktool.options.CreateWindupUserOptions;
 import org.jboss.windup.web.keycloaktool.options.InitializeKeycloakOptions;
 import org.jboss.windup.web.keycloaktool.options.Options;
-import org.jboss.windup.web.keycloaktool.options.PrintRealmPublicKeyOptions;
+import org.jboss.windup.web.keycloaktool.options.PrintRealmPublicKeyScriptOptions;
 
 import net.sourceforge.argparse4j.ArgumentParsers;
 import net.sourceforge.argparse4j.inf.ArgumentParser;
@@ -58,15 +58,16 @@ public class Main
                 CreateWindupUser createWindupUser = new CreateWindupUser();
                 createWindupUser.execute(options.getCreateWindupUserOptions());
             }
-            else if (PrintRealmPublicKeyOptions.PRINT_WINDUP_REALM_PUBLIC_KEY.equals(options.getCommand()))
+            else if (PrintRealmPublicKeyScriptOptions.PRINT_WINDUP_REALM_PUBLIC_KEY.equals(options.getCommand()))
             {
-                PrintRealmPublicKeyCommand printRealmPublicKeyCommand = new PrintRealmPublicKeyCommand();
-                printRealmPublicKeyCommand.execute(options.getPrintRealmPublicKeyOptions());
+                PrintRealmPublicKeyScriptCommand printRealmPublicKeyScriptCommand = new PrintRealmPublicKeyScriptCommand();
+                printRealmPublicKeyScriptCommand.execute(options.getPrintRealmPublicKeyScriptOptions());
             }
             else
             {
                 parser.printHelp();
             }
+            System.exit(0);
         }
         catch (HelpScreenException e)
         {
@@ -79,7 +80,6 @@ public class Main
             {
                 parser.printHelp();
             }
-            e.printStackTrace();
         }
         catch (Exception e)
         {
