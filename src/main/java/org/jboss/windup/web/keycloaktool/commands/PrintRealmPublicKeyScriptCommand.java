@@ -17,7 +17,7 @@ public class PrintRealmPublicKeyScriptCommand
                     options.getAdminUser(), options.getAdminPassword(), // the user
                     "admin-cli");
 
-        String publicKey = kc.realm("windup").toRepresentation().getPublicKey();
+        String publicKey = kc.realm("rhamt").toRepresentation().getPublicKey();
         System.out.println("/system-property=keycloak.realm.public.key:add(value=\"" + publicKey + "\")");
     }
 }
