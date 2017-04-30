@@ -18,7 +18,35 @@
     <properties>
         <version.keycloak>2.1.0.Final</version.keycloak>
         <version.resteasy>3.0.14.Final</version.resteasy>
+
+        <windup.scm.connection>scm:git:https://github.com/windup/windup-keycloak-tool.git</windup.scm.connection>
+        <windup.developer.connection>scm:git:git@github.com:windup/windup-keycloak-tool.git</windup.developer.connection>
+        <windup.scm.url>http://github.com/windup/windup-keycloak-tool</windup.scm.url>
     </properties>
+
+    <scm>
+        <tag>master</tag>
+        <connection>${windup.scm.connection}</connection>
+        <developerConnection>${windup.developer.connection}</developerConnection>
+        <url>${windup.scm.url}</url>
+    </scm>
+
+    <issueManagement>
+        <system>JBoss Jira</system>
+        <url>https://issues.jboss.org/browse/WINDUP</url>
+    </issueManagement>
+    <mailingLists>
+        <mailingList>
+            <name>Windup Rules Development and Usage</name>
+            <post>windup-users@lists.jboss.org</post>
+            <archive>http://lists.jboss.org/pipermail/windup-users/</archive>
+        </mailingList>
+        <mailingList>
+            <name>Windup Core Development</name>
+            <post>windup-dev@lists.jboss.org</post>
+            <archive>http://lists.jboss.org/pipermail/windup-dev/</archive>
+        </mailingList>
+    </mailingLists>
 
     <dependencies>
         <dependency>
