@@ -8,14 +8,19 @@ import net.sourceforge.argparse4j.inf.Subparsers;
  */
 public class CreateWindupRealmOptions
 {
+    public static final String VERSION_70 = "sso_70";
+    public static final String VERSION_LATEST = "latest";
+
     public static final String CREATE_WINDUP_REALM = "create-windup-realm";
     public static final String DEFAULT_KEYCLOAK_URL = "http://localhost:8080/auth";
     public static final String DEFAULT_PASSWORD = "password";
     public static final String DEFAULT_USERNAME = "admin";
+    public static final String DEFAULT_VERSION = VERSION_LATEST;
 
     private String keycloakUrl = DEFAULT_KEYCLOAK_URL;
     private String adminUser = DEFAULT_USERNAME;
     private String adminPassword = DEFAULT_PASSWORD;
+    private String keycloakVersion = DEFAULT_VERSION;
 
     public CreateWindupRealmOptions(Subparsers subparsers)
     {
@@ -38,6 +43,18 @@ public class CreateWindupRealmOptions
                     .action((StoreAction) (name, value) -> {
                         this.adminPassword = value.toString();
                     });
+
+        subparser
+                .addArgument("--keycloakVersion")
+                .help("Keycloak version (supported values: " + VERSION_LATEST + ", " + VERSION_70 + ") (default: " + DEFAULT_VERSION + ").")
+                .action((StoreAction) (name, value) -> {
+                    this.keycloakVersion = value.toString();
+                });
+    }
+
+    public String getKeycloakVersion()
+    {
+        return keycloakVersion;
     }
 
     public String getKeycloakUrl()

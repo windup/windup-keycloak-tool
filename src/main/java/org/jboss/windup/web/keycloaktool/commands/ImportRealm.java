@@ -23,7 +23,20 @@ public class ImportRealm
                     options.getAdminUser(), options.getAdminPassword(), // the user
                     "admin-cli");
 
-        try (InputStream realmJsonIS = getClass().getResourceAsStream("/windup-realm/windup-realm.json"))
+        String filename;
+        switch (options.getKeycloakVersion()) {
+            case CreateWindupRealmOptions.VERSION_LATEST:
+                filename = "/windup-realm/windup-realm.json";
+                break;
+            case CreateWindupRealmOptions.VERSION_70:
+                filename = "/windup-realm/windup-realm-sso-70.json";
+                break;
+            default:
+                throw new RuntimeException("Unrecognized keycloak version: " + options.getKeycloakVersion());
+        }
+        LOG.info("Using realm file: " + filename);
+
+        try (InputStream realmJsonIS = getClass().getResourceAsStream(filename))
         {
             RealmRepresentation realmRepresentation = JsonSerialization.readValue(realmJsonIS, RealmRepresentation.class);
             kc.realms().create(realmRepresentation);
