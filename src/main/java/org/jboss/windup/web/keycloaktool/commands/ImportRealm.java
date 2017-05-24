@@ -5,6 +5,7 @@ import java.util.logging.Logger;
 
 import org.jboss.windup.web.keycloaktool.options.CreateWindupRealmOptions;
 import org.keycloak.admin.client.Keycloak;
+import org.keycloak.admin.client.resource.RealmResource;
 import org.keycloak.representations.idm.RealmRepresentation;
 import org.keycloak.util.JsonSerialization;
 
@@ -40,6 +41,7 @@ public class ImportRealm
         {
             RealmRepresentation realmRepresentation = JsonSerialization.readValue(realmJsonIS, RealmRepresentation.class);
             kc.realms().create(realmRepresentation);
+
             LOG.info("Import complete!");
         }
         catch (Exception e)

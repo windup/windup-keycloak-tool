@@ -15,7 +15,7 @@
     <name>Windup Web - Keycloak Tool</name>
 
     <properties>
-        <version.keycloak>2.1.0.Final</version.keycloak>
+        <version.keycloak>1.9.8.Final</version.keycloak>
         <version.resteasy>3.0.14.Final</version.resteasy>
 
         <windup.scm.connection>scm:git:https://github.com/windup/windup-keycloak-tool.git</windup.scm.connection>

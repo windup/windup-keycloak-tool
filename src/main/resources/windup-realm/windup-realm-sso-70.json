@@ -13,7 +13,7 @@
   "accessCodeLifespanUserAction" : 300,
   "accessCodeLifespanLogin" : 1800,
   "enabled" : true,
-  "sslRequired" : "external",
+  "sslRequired" : "none",
   "registrationAllowed" : false,
   "registrationEmailAsUsername" : false,
   "rememberMe" : false,
@@ -37,21 +37,18 @@
       "name" : "uma_authorization",
       "description" : "${role_uma_authorization}",
       "scopeParamRequired" : false,
-      "composite" : false,
-      "containerId" : "rhamt"
+      "composite" : false
     }, {
       "id" : "bef95cbf-c0a4-4f15-a90c-b74967c2edfe",
       "name" : "offline_access",
       "description" : "${role_offline-access}",
       "scopeParamRequired" : true,
-      "composite" : false,
-      "containerId" : "rhamt"
+      "composite" : false
     }, {
       "id" : "9a3d3dec-8de3-4fd6-8156-f09c314b9f28",
       "name" : "user",
       "scopeParamRequired" : false,
-      "composite" : false,
-      "containerId" : "rhamt"
+      "composite" : false
     } ],
     "client" : {
       "rhamt-web" : [ ],
@@ -60,57 +57,49 @@
         "name" : "manage-authorization",
         "description" : "${role_manage-authorization}",
         "scopeParamRequired" : false,
-        "composite" : false,
-        "containerId" : "9ea825ad-0fab-4946-bc9a-43d7823e6a32"
+        "composite" : false
       }, {
         "id" : "fd58f8b0-bb9a-443c-9499-f934e41e3f69",
         "name" : "manage-users",
         "description" : "${role_manage-users}",
         "scopeParamRequired" : false,
-        "composite" : false,
-        "containerId" : "9ea825ad-0fab-4946-bc9a-43d7823e6a32"
+        "composite" : false
       }, {
         "id" : "fa10d38a-0ff9-42bd-abc2-aa0183368fb5",
         "name" : "view-users",
         "description" : "${role_view-users}",
         "scopeParamRequired" : false,
-        "composite" : false,
-        "containerId" : "9ea825ad-0fab-4946-bc9a-43d7823e6a32"
+        "composite" : false
       }, {
         "id" : "94766e81-0a09-4e72-880c-7658f45aaff1",
         "name" : "manage-realm",
         "description" : "${role_manage-realm}",
         "scopeParamRequired" : false,
-        "composite" : false,
-        "containerId" : "9ea825ad-0fab-4946-bc9a-43d7823e6a32"
+        "composite" : false
       }, {
         "id" : "c95e2a2a-1998-45c8-8e8f-59e2340f68f6",
         "name" : "manage-events",
         "description" : "${role_manage-events}",
         "scopeParamRequired" : false,
-        "composite" : false,
-        "containerId" : "9ea825ad-0fab-4946-bc9a-43d7823e6a32"
+        "composite" : false
       }, {
         "id" : "405907ae-4172-4b2e-8583-96764dde19c4",
         "name" : "view-clients",
         "description" : "${role_view-clients}",
         "scopeParamRequired" : false,
-        "composite" : false,
-        "containerId" : "9ea825ad-0fab-4946-bc9a-43d7823e6a32"
+        "composite" : false
       }, {
         "id" : "f581e062-8d42-4de7-8cb1-330af99d7f4c",
         "name" : "view-events",
         "description" : "${role_view-events}",
         "scopeParamRequired" : false,
-        "composite" : false,
-        "containerId" : "9ea825ad-0fab-4946-bc9a-43d7823e6a32"
+        "composite" : false
       }, {
         "id" : "433631e5-e351-423b-8c28-79621fcb0e1a",
         "name" : "manage-clients",
         "description" : "${role_manage-clients}",
         "scopeParamRequired" : false,
-        "composite" : false,
-        "containerId" : "9ea825ad-0fab-4946-bc9a-43d7823e6a32"
+        "composite" : false
       }, {
         "id" : "9c53facb-bb63-4131-8843-fd5a8b9063ee",
         "name" : "realm-admin",
@@ -121,50 +110,43 @@
           "client" : {
             "realm-management" : [ "manage-authorization", "manage-users", "view-users", "manage-realm", "manage-events", "view-clients", "view-events", "manage-clients", "create-client", "impersonation", "view-realm", "manage-identity-providers", "view-identity-providers", "view-authorization" ]
           }
-        },
-        "containerId" : "9ea825ad-0fab-4946-bc9a-43d7823e6a32"
+        }
       }, {
         "id" : "36b97fea-5902-46e5-b652-764218103ad2",
         "name" : "create-client",
         "description" : "${role_create-client}",
         "scopeParamRequired" : false,
-        "composite" : false,
-        "containerId" : "9ea825ad-0fab-4946-bc9a-43d7823e6a32"
+        "composite" : false
       }, {
         "id" : "bd6d7cb8-74d3-4b92-ad86-266c59af1868",
         "name" : "impersonation",
         "description" : "${role_impersonation}",
         "scopeParamRequired" : false,
-        "composite" : false,
-        "containerId" : "9ea825ad-0fab-4946-bc9a-43d7823e6a32"
+        "composite" : false
       }, {
         "id" : "6ae3a0b1-b2fb-4909-a872-8b7513a58743",
         "name" : "view-realm",
         "description" : "${role_view-realm}",
         "scopeParamRequired" : false,
-        "composite" : false,
-        "containerId" : "9ea825ad-0fab-4946-bc9a-43d7823e6a32"
+        "composite" : false
       }, {
         "id" : "a6a4b219-15ef-4b5d-875a-5c41a448164b",
         "name" : "manage-identity-providers",
         "description" : "${role_manage-identity-providers}",
         "scopeParamRequired" : false,
-        "composite" : false,
-        "containerId" : "9ea825ad-0fab-4946-bc9a-43d7823e6a32"
+        "composite" : false
       }, {
         "id" : "a7c6e3a9-4b8e-444f-b5aa-af2109e4f6a0",
         "name" : "view-identity-providers",
         "description" : "${role_view-identity-providers}",
         "scopeParamRequired" : false,
-        "composite" : false,
-        "containerId" : "9ea825ad-0fab-4946-bc9a-43d7823e6a32"
+        "composite" : false
       }, {
         "id" : "a3f6a29c-97d9-445b-937e-f4cc98ce1e16",
         "name" : "view-authorization",
         "description" : "${role_view-authorization}",
         "scopeParamRequired" : false,
-        "composite" : false,
-        "containerId" : "9ea825ad-0fab-4946-bc9a-43d7823e6a32"
+        "composite" : false
       } ],
       "security-admin-console" : [ ],
       "admin-cli" : [ ],
@@ -173,23 +155,20 @@
         "name" : "read-token",
         "description" : "${role_read-token}",
         "scopeParamRequired" : false,
-        "composite" : false,
-        "containerId" : "18fc5aaa-acb0-4c20-b555-f9ddf21803df"
+        "composite" : false
       } ],
       "account" : [ {
         "id" : "0ed010f2-b0f0-4591-93da-26ae0fd89c5f",
         "name" : "manage-account",
         "description" : "${role_manage-account}",
         "scopeParamRequired" : false,
-        "composite" : false,
-        "containerId" : "8ad07d06-b9cf-4905-9267-ddec6a8aa09a"
+        "composite" : false
       }, {
         "id" : "a2854d7e-e1b8-4a64-ba2d-b07cc4584644",
         "name" : "view-profile",
         "description" : "${role_view-profile}",
         "scopeParamRequired" : false,
-        "composite" : false,
-        "containerId" : "8ad07d06-b9cf-4905-9267-ddec6a8aa09a"
+        "composite" : false
       } ]
     }
   },
@@ -658,13 +637,13 @@
     "id" : "739a78cd-ab8d-427a-93f7-4af38f0eab31",
     "clientId" : "rhamt-web",
     "name" : "Red Hat Application Migration Toolkit Web Console",
-    "adminUrl" : "/rhamt-web/",
+    "adminUrl" : "",
     "surrogateAuthRequired" : false,
     "enabled" : true,
     "clientAuthenticatorType" : "client-secret",
     "secret" : "3ab54e7d-0398-49ed-9f2d-05756aeeb765",
-    "redirectUris" : [ "/rhamt-web/*" ],
-    "webOrigins" : [ "/" ],
+    "redirectUris" : [ "*" ],
+    "webOrigins" : [ "*" ],
     "notBefore" : 0,
     "bearerOnly" : false,
     "consentRequired" : false,

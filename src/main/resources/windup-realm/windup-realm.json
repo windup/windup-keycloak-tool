@@ -224,23 +224,7 @@
   "otpPolicyDigits" : 6,
   "otpPolicyLookAheadWindow" : 1,
   "otpPolicyPeriod" : 30,
-  "users" : [ {
-    "id" : "1453daaa-2720-4037-94e6-6fcd4b5feac8",
-    "createdTimestamp" : 1491555471831,
-    "username" : "guest",
-    "enabled" : true,
-    "totp" : false,
-    "emailVerified" : true,
-    "credentials" : [ {
-      "type" : "password",
-      "hashedSaltedValue" : "NSOEorQ1rz34WBxiXMjLQ2BOQbRiopzBJxIanLRdtpAovTZFjThgrfJ4bUJxcDuB6/VWJTiZUCVTmZ728a9LhQ==",
-      "salt" : "bZpA95f6jasCUpvhLNi0Hw==",
-      "hashIterations" : 20000,
-      "counter" : 0,
-      "algorithm" : "pbkdf2",
-      "digits" : 0,
-      "createdDate" : 1491556090000
-    } ],
+  "users" : [ ],
     "requiredActions" : [ ],
     "realmRoles" : [ "uma_authorization", "offline_access", "user" ],
     "clientRoles" : {
