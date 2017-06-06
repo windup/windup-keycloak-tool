@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.jboss.windup.web</groupId>
   <artifactId>windup-keycloak-tool</artifactId>
-  <version>4.0.0.Beta1</version>
+  <version>4.0.0.Beta2</version>
   <name>Windup Web - Keycloak Tool</name>
   <description>Parent POM for JBoss projects. Provides default project build configuration.</description>
   <url>http://www.jboss.org/windup-keycloak-tool</url>
@@ -298,12 +298,28 @@
     <repository>
       <releases>
         <enabled>true</enabled>
+        <updatePolicy>never</updatePolicy>
       </releases>
       <snapshots>
         <enabled>true</enabled>
+        <updatePolicy>never</updatePolicy>
       </snapshots>
-      <id>jboss-community-repository</id>
-      <url>http://repository.jboss.org/nexus/content/groups/public/</url>
+      <id>jboss-public-repository-group</id>
+      <name>JBoss Public Maven Repository Group</name>
+      <url>https://repository.jboss.org/nexus/content/groups/public/</url>
+    </repository>
+    <repository>
+      <releases>
+        <enabled>true</enabled>
+        <updatePolicy>never</updatePolicy>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>never</updatePolicy>
+      </snapshots>
+      <id>cloudbee-snapshot-forge</id>
+      <name>CloudBee</name>
+      <url>https://repository-forge.forge.cloudbees.com/snapshot/</url>
     </repository>
     <repository>
       <snapshots>
@@ -322,8 +338,9 @@
       <snapshots>
         <enabled>true</enabled>
       </snapshots>
-      <id>jboss-community-plugin-repository</id>
-      <url>http://repository.jboss.org/nexus/content/groups/public/</url>
+      <id>jboss-public-repository-group</id>
+      <name>JBoss Public Maven Repository Group</name>
+      <url>https://repository.jboss.org/nexus/content/groups/public/</url>
     </pluginRepository>
     <pluginRepository>
       <releases>
@@ -339,7 +356,7 @@
   </pluginRepositories>
   <build>
     <sourceDirectory>src/main/java</sourceDirectory>
-    <scriptSourceDirectory>/home/jsightler/project/migration/windup-web-release/windup_tmp_dir/windup-keycloak-tool/src/main/scripts</scriptSourceDirectory>
+    <scriptSourceDirectory>/home/mnovotny/tmp/windup_tmp_dir/windup-keycloak-tool/src/main/scripts</scriptSourceDirectory>
     <testSourceDirectory>src/test/java</testSourceDirectory>
     <outputDirectory>target/classes</outputDirectory>
     <testOutputDirectory>target/test-classes</testOutputDirectory>
