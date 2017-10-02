@@ -2,8 +2,8 @@ package org.jboss.windup.web.keycloaktool.commands;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import org.keycloak.common.util.Base64;
-import org.keycloak.hash.Pbkdf2PasswordHashProvider;
-import org.keycloak.models.UserCredentialValueModel;
+//import org.keycloak.hash.Pbkdf2PasswordHashProvider;
+//import org.keycloak.models.UserCredentialValueModel;
 import org.keycloak.representations.idm.CredentialRepresentation;
 import org.keycloak.representations.idm.RealmRepresentation;
 import org.keycloak.representations.idm.UserRepresentation;
@@ -59,14 +59,16 @@ public class AddUser {
         user.setUsername(userName);
         user.setCredentials(new LinkedList<CredentialRepresentation>());
 
-        UserCredentialValueModel credentialValueModel = new Pbkdf2PasswordHashProvider().encode(password, iterations > 0 ? iterations : DEFAULT_HASH_ITERATIONS);
+        //UserCredentialValueModel credentialValueModel = new Pbkdf2PasswordHashProvider().encode(password, iterations > 0 ? iterations : DEFAULT_HASH_ITERATIONS);
 
         CredentialRepresentation credentials = new CredentialRepresentation();
-        credentials.setType(credentialValueModel.getType());
-        credentials.setAlgorithm(credentialValueModel.getAlgorithm());
-        credentials.setHashIterations(credentialValueModel.getHashIterations());
-        credentials.setSalt(Base64.encodeBytes(credentialValueModel.getSalt()));
-        credentials.setHashedSaltedValue(credentialValueModel.getValue());
+        credentials.setType("password");
+        //credentials.setAlgorithm(credentialValueModel.getAlgorithm());
+        //credentials.setHashIterations(credentialValueModel.getHashIterations());
+        //credentials.setSalt(Base64.encodeBytes(credentialValueModel.getSalt()));
+        //credentials.setHashedSaltedValue(credentialValueModel.getValue());
+        credentials.setValue(password);
+        credentials.setTemporary(false);
 
         user.getCredentials().add(credentials);
 
