@@ -6,13 +6,13 @@
         <groupId>org.jboss</groupId>
         <artifactId>jboss-parent</artifactId>
         <version>22</version>
-        <relativePath/>
+        <relativePath />
     </parent>
 
 
     <groupId>org.jboss.windup.web</groupId>
     <artifactId>windup-keycloak-tool</artifactId>
-    <version>4.1.0-SNAPSHOT</version>
+    <version>4.1.0.Alpha3</version>
     <name>Windup Web - Keycloak Tool</name>
 
     <properties>
@@ -25,7 +25,7 @@
     </properties>
 
     <scm>
-        <tag>master</tag>
+        <tag>4.1.0.Alpha3</tag>
         <connection>${windup.scm.connection}</connection>
         <developerConnection>${windup.developer.connection}</developerConnection>
         <url>${windup.scm.url}</url>

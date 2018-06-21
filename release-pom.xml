@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.jboss.windup.web</groupId>
   <artifactId>windup-keycloak-tool</artifactId>
-  <version>4.0.0.Beta2.1</version>
+  <version>4.1.0.Alpha3</version>
   <name>Windup Web - Keycloak Tool</name>
   <description>Parent POM for JBoss projects. Provides default project build configuration.</description>
   <url>http://www.jboss.org/windup-keycloak-tool</url>
@@ -51,14 +51,12 @@
   </issueManagement>
   <distributionManagement>
     <repository>
-      <id>jboss-releases-repository</id>
-      <name>JBoss Releases Repository</name>
-      <url>https://repository.jboss.org/nexus/service/local/staging/deploy/maven2/</url>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
     </repository>
     <snapshotRepository>
-      <id>jboss-snapshots-repository</id>
-      <name>JBoss Snapshots Repository</name>
-      <url>https://repository.jboss.org/nexus/content/repositories/snapshots/</url>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
     </snapshotRepository>
   </distributionManagement>
   <properties>
@@ -71,7 +69,7 @@
     <version.deploy.plugin>2.8.2</version.deploy.plugin>
     <version.injection.plugin>1.0.2</version.injection.plugin>
     <maven.compiler.argument.source>1.8</maven.compiler.argument.source>
-    <version.keycloak>2.1.0.Final</version.keycloak>
+    <version.keycloak>2.5.5.Final</version.keycloak>
     <version.plugin.plugin>3.5</version.plugin.plugin>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <sourceReleaseAssemblyDescriptor>source-release</sourceReleaseAssemblyDescriptor>
@@ -272,25 +270,25 @@
     <dependency>
       <groupId>org.keycloak</groupId>
       <artifactId>keycloak-admin-client</artifactId>
-      <version>2.1.0.Final</version>
+      <version>2.5.5.Final</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.keycloak</groupId>
       <artifactId>keycloak-common</artifactId>
-      <version>2.1.0.Final</version>
+      <version>2.5.5.Final</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.keycloak</groupId>
       <artifactId>keycloak-core</artifactId>
-      <version>2.1.0.Final</version>
+      <version>2.5.5.Final</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.keycloak</groupId>
       <artifactId>keycloak-server-spi</artifactId>
-      <version>2.1.0.Final</version>
+      <version>2.5.5.Final</version>
       <scope>compile</scope>
     </dependency>
   </dependencies>
@@ -305,21 +303,8 @@
         <updatePolicy>never</updatePolicy>
       </snapshots>
       <id>jboss-public-repository-group</id>
-      <name>JBoss Public Maven Repository Group</name>
-      <url>https://repository.jboss.org/nexus/content/groups/public/</url>
-    </repository>
-    <repository>
-      <releases>
-        <enabled>true</enabled>
-        <updatePolicy>never</updatePolicy>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-        <updatePolicy>never</updatePolicy>
-      </snapshots>
-      <id>cloudbee-snapshot-forge</id>
-      <name>CloudBee</name>
-      <url>https://repository-forge.forge.cloudbees.com/snapshot/</url>
+      <name>JBoss Public Repository Group</name>
+      <url>http://repository.jboss.org/nexus/content/groups/public/</url>
     </repository>
     <repository>
       <snapshots>
@@ -339,8 +324,8 @@
         <enabled>true</enabled>
       </snapshots>
       <id>jboss-public-repository-group</id>
-      <name>JBoss Public Maven Repository Group</name>
-      <url>https://repository.jboss.org/nexus/content/groups/public/</url>
+      <name>JBoss Public Repository Group</name>
+      <url>http://repository.jboss.org/nexus/content/groups/public/</url>
     </pluginRepository>
     <pluginRepository>
       <releases>
@@ -356,7 +341,7 @@
   </pluginRepositories>
   <build>
     <sourceDirectory>src/main/java</sourceDirectory>
-    <scriptSourceDirectory>/home/mnovotny/tmp/windup_tmp_dir/windup_tmp_dir/windup-keycloak-tool/src/main/scripts</scriptSourceDirectory>
+    <scriptSourceDirectory>/home/mrizzi/tmp_4_releases/tmp_release_4.1.0.Alpha3/windup-web/windup_web_tmp_dir/windup-keycloak-tool/src/main/scripts</scriptSourceDirectory>
     <testSourceDirectory>src/test/java</testSourceDirectory>
     <outputDirectory>target/classes</outputDirectory>
     <testOutputDirectory>target/test-classes</testOutputDirectory>
