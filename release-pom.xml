@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.jboss.windup.web</groupId>
   <artifactId>windup-keycloak-tool</artifactId>
-  <version>4.1.0.Alpha3</version>
+  <version>4.1.0.Alpha5</version>
   <name>Windup Web - Keycloak Tool</name>
   <description>Parent POM for JBoss projects. Provides default project build configuration.</description>
   <url>http://www.jboss.org/windup-keycloak-tool</url>
@@ -82,6 +82,7 @@
     <version.sonar.plugin>5.1</version.sonar.plugin>
     <useReleaseProfile>false</useReleaseProfile>
     <version.bundle.plugin>3.2.0</version.bundle.plugin>
+    <gpg.passphrase>n74UKpj0Hj</gpg.passphrase>
     <jboss.releases.repo.url>https://repository.jboss.org/nexus/service/local/staging/deploy/maven2/</jboss.releases.repo.url>
     <version.jxr.plugin>2.5</version.jxr.plugin>
     <version.install.plugin>2.5.2</version.install.plugin>
@@ -341,7 +342,7 @@
   </pluginRepositories>
   <build>
     <sourceDirectory>src/main/java</sourceDirectory>
-    <scriptSourceDirectory>/home/mrizzi/tmp_4_releases/tmp_release_4.1.0.Alpha3/windup-web/windup_web_tmp_dir/windup-keycloak-tool/src/main/scripts</scriptSourceDirectory>
+    <scriptSourceDirectory>/home/mrizzi/tmp_4_releases/tmp_release_4.1.0.Alpha5/windup_web_tmp_dir/windup-keycloak-tool/src/main/scripts</scriptSourceDirectory>
     <testSourceDirectory>src/test/java</testSourceDirectory>
     <outputDirectory>target/classes</outputDirectory>
     <testOutputDirectory>target/test-classes</testOutputDirectory>
