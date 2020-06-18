@@ -15,7 +15,7 @@ import org.keycloak.util.JsonSerialization;
  */
 public class CreateWindupUser
 {
-    public static final String WINDUP_REALM_NAME = "rhamt";
+    public static final String WINDUP_REALM_NAME = "mta";
     private static Logger LOG = Logger.getLogger(CreateWindupUser.class.getName());
 
     public void execute(CreateWindupUserOptions options)
