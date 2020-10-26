@@ -786,10 +786,10 @@
       "secret": "3ab54e7d-0398-49ed-9f2d-05756aeeb765",
       "adminUrl": "/mta-web/",
       "redirectUris": [
-        "/mta-web/*"
+        "/mta-web/*",
+        "/mta-web-pf4/*"
       ],
       "webOrigins": [
-        "/",
         "/"
       ],
       "notBefore": 0,
