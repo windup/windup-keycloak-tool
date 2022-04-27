@@ -12,10 +12,14 @@ public class CreateWindupRealmOptions
     public static final String DEFAULT_KEYCLOAK_URL = "http://localhost:8080/auth";
     public static final String DEFAULT_PASSWORD = "password";
     public static final String DEFAULT_USERNAME = "admin";
+    public static final String DEFAULT_REALM_NAME = "mta";
+    public static final String DEFAULT_LOGIN_THEME = "mta";
 
     private String keycloakUrl = DEFAULT_KEYCLOAK_URL;
     private String adminUser = DEFAULT_USERNAME;
     private String adminPassword = DEFAULT_PASSWORD;
+    private String realmName = DEFAULT_REALM_NAME;
+    private String loginTheme = DEFAULT_LOGIN_THEME;
 
     public CreateWindupRealmOptions(Subparsers subparsers)
     {
@@ -38,6 +42,18 @@ public class CreateWindupRealmOptions
                     .action((StoreAction) (name, value) -> {
                         this.adminPassword = value.toString();
                     });
+        subparser
+                .addArgument("--realmName")
+                .help("Keycloak Realm's name (default: " + DEFAULT_REALM_NAME + ").")
+                .action((StoreAction) (name, value) -> {
+                    this.realmName = value.toString();
+                });
+        subparser
+                .addArgument("--loginTheme")
+                .help("Keycloak login theme (default: " + DEFAULT_LOGIN_THEME + ").")
+                .action((StoreAction) (name, value) -> {
+                    this.loginTheme = value.toString();
+                });
     }
 
     public String getKeycloakUrl()
@@ -53,5 +69,15 @@ public class CreateWindupRealmOptions
     public String getAdminPassword()
     {
         return adminPassword;
+    }
+
+    public String getRealmName()
+    {
+        return realmName;
+    }
+
+    public String getLoginTheme()
+    {
+        return loginTheme;
     }
 }

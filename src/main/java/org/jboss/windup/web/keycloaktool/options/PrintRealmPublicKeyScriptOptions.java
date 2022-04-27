@@ -10,10 +10,12 @@ public class PrintRealmPublicKeyScriptOptions
 {
     public static final String PRINT_WINDUP_REALM_PUBLIC_KEY = "print-windup-realm-public-key-script";
     public static final String DEFAULT_KEYCLOAK_URL = "http://localhost:8080/auth";
+    public static final String DEFAULT_REALM_NAME = CreateWindupRealmOptions.DEFAULT_REALM_NAME;
     public static final String DEFAULT_PASSWORD = "password";
     public static final String DEFAULT_USERNAME = "admin";
 
     private String keycloakUrl = DEFAULT_KEYCLOAK_URL;
+    private String realmName = DEFAULT_REALM_NAME;
     private String adminUser = DEFAULT_USERNAME;
     private String adminPassword = DEFAULT_PASSWORD;
 
@@ -27,6 +29,12 @@ public class PrintRealmPublicKeyScriptOptions
                     .action((StoreAction) (name, value) -> {
                         this.keycloakUrl = value.toString();
                     });
+        subparser
+                .addArgument("--realmName")
+                .help("Keycloak Realm's name (default: " + DEFAULT_REALM_NAME + ").")
+                .action((StoreAction) (name, value) -> {
+                    this.realmName = value.toString();
+                });
         subparser
                     .addArgument("--username")
                     .help("Keycloak Admin user name (default: " + DEFAULT_USERNAME + ").")
@@ -44,6 +52,11 @@ public class PrintRealmPublicKeyScriptOptions
     public String getKeycloakUrl()
     {
         return keycloakUrl;
+    }
+
+    public String getRealmName()
+    {
+        return realmName;
     }
 
     public String getAdminUser()

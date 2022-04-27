@@ -20,7 +20,7 @@ public class PrintRealmPublicKeyScriptCommand
                     options.getAdminUser(), options.getAdminPassword(), // the user
                     "admin-cli");
 
-        List<KeysMetadataRepresentation.KeyMetadataRepresentation> keys = kc.realm("mta").keys().getKeyMetadata().getKeys().stream()
+        List<KeysMetadataRepresentation.KeyMetadataRepresentation> keys = kc.realm(options.getRealmName()).keys().getKeyMetadata().getKeys().stream()
                 .filter(keyMetadataRepresentation -> keyMetadataRepresentation.getPublicKey() != null).collect(Collectors.toList());
         if (keys.isEmpty())
             throw new RuntimeException("No public key found for realm!");
