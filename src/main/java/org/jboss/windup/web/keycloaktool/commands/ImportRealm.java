@@ -26,7 +26,6 @@ public class ImportRealm
         try (InputStream realmJsonIS = getClass().getResourceAsStream("/windup-realm/windup-realm.json"))
         {
             RealmRepresentation realmRepresentation = JsonSerialization.readValue(realmJsonIS, RealmRepresentation.class);
-            realmRepresentation.setRealm(options.getRealmName());
             realmRepresentation.setLoginTheme(options.getLoginTheme());
             kc.realms().create(realmRepresentation);
             LOG.info("Import complete!");

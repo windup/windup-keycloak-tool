@@ -15,6 +15,7 @@ import org.keycloak.util.JsonSerialization;
  */
 public class CreateWindupUser
 {
+    public static final String WINDUP_REALM_NAME = "mta";
     private static Logger LOG = Logger.getLogger(CreateWindupUser.class.getName());
 
     public void execute(CreateWindupUserOptions options)
@@ -32,9 +33,9 @@ public class CreateWindupUser
         user.setLastName(options.getLastName());
         user.setEnabled(true);
 
-        kc.realm(options.getRealmName()).users().create(user).getEntity();
+        kc.realm(WINDUP_REALM_NAME).users().create(user).getEntity();
 
-        UsersResource usersResource = kc.realm(options.getRealmName()).users();
+        UsersResource usersResource = kc.realm(WINDUP_REALM_NAME).users();
         List<UserRepresentation> users = usersResource.search(user.getUsername(), null, null, null, 0, 100);
         if (users.isEmpty())
         {
@@ -59,7 +60,7 @@ public class CreateWindupUser
         credential.setType(CredentialRepresentation.PASSWORD);
         credential.setTemporary(false);
         credential.setValue(options.getNewUserPassword());
-        kc.realm(options.getRealmName()).users().get(user.getId()).resetPassword(credential);
+        kc.realm(WINDUP_REALM_NAME).users().get(user.getId()).resetPassword(credential);
 
         LOG.info("User creation complete!");
     }
