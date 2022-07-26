@@ -12,7 +12,7 @@ public class CreateWindupRealmOptions
     public static final String DEFAULT_KEYCLOAK_URL = "http://localhost:8080/auth";
     public static final String DEFAULT_PASSWORD = "password";
     public static final String DEFAULT_USERNAME = "admin";
-    public static final String DEFAULT_LOGIN_THEME = "mta";
+    public static final String DEFAULT_LOGIN_THEME = "windup";
 
     private String keycloakUrl = DEFAULT_KEYCLOAK_URL;
     private String adminUser = DEFAULT_USERNAME;

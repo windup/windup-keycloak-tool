@@ -1,7 +1,7 @@
 {
-  "id": "mta",
-  "realm": "mta",
-  "displayName": "Migration Toolkit for Applications Web Console",
+  "id": "windup",
+  "realm": "windup",
+  "displayName": "Windup Web Console",
   "notBefore": 0,
   "revokeRefreshToken": false,
   "accessTokenLifespan": 300,
@@ -40,7 +40,7 @@
         "scopeParamRequired": false,
         "composite": false,
         "clientRole": false,
-        "containerId": "mta"
+        "containerId": "windup"
       },
       {
         "id": "bef95cbf-c0a4-4f15-a90c-b74967c2edfe",
@@ -49,7 +49,7 @@
         "scopeParamRequired": true,
         "composite": false,
         "clientRole": false,
-        "containerId": "mta"
+        "containerId": "windup"
       },
       {
         "id": "9a3d3dec-8de3-4fd6-8156-f09c314b9f28",
@@ -57,11 +57,11 @@
         "scopeParamRequired": false,
         "composite": false,
         "clientRole": false,
-        "containerId": "mta"
+        "containerId": "windup"
       }
     ],
     "client": {
-      "mta-web": [],
+      "windup-web": [],
       "realm-management": [
         {
           "id": "e844ae76-0cb5-4393-8a07-b9de2626d7d3",
@@ -326,7 +326,7 @@
       "id": "8ad07d06-b9cf-4905-9267-ddec6a8aa09a",
       "clientId": "account",
       "name": "${client_account}",
-      "baseUrl": "/auth/realms/mta/account",
+      "baseUrl": "/auth/realms/windup/account",
       "surrogateAuthRequired": false,
       "enabled": true,
       "clientAuthenticatorType": "client-secret",
@@ -336,7 +336,7 @@
         "manage-account"
       ],
       "redirectUris": [
-        "/auth/realms/mta/account/*"
+        "/auth/realms/windup/account/*"
       ],
       "webOrigins": [],
       "notBefore": 0,
@@ -778,16 +778,16 @@
     },
     {
       "id": "739a78cd-ab8d-427a-93f7-4af38f0eab31",
-      "clientId": "mta-web",
+      "clientId": "windup-web",
       "name": "Migration Toolkit for Applications Web Console",
       "surrogateAuthRequired": false,
       "enabled": true,
       "clientAuthenticatorType": "client-secret",
       "secret": "3ab54e7d-0398-49ed-9f2d-05756aeeb765",
-      "adminUrl": "/mta-web/",
+      "adminUrl": "/windup-web/",
       "redirectUris": [
-        "/mta-web/*",
-        "/mta-ui/*"
+        "/windup-web/*",
+        "/windup-ui/*"
       ],
       "webOrigins": [
         "/"
@@ -908,13 +908,13 @@
       "id": "9d84ccd5-81ea-468d-9646-73c0078962d7",
       "clientId": "security-admin-console",
       "name": "${client_security-admin-console}",
-      "baseUrl": "/auth/admin/mta/console/index.html",
+      "baseUrl": "/auth/admin/windup/console/index.html",
       "surrogateAuthRequired": false,
       "enabled": true,
       "clientAuthenticatorType": "client-secret",
       "secret": "839e5ee0-97ff-453c-aa16-ca371cfd97f0",
       "redirectUris": [
-        "/auth/admin/mta/console/*"
+        "/auth/admin/windup/console/*"
       ],
       "webOrigins": [],
       "notBefore": 0,
@@ -1041,7 +1041,7 @@
     "contentSecurityPolicy": "frame-src 'self'"
   },
   "smtpServer": {},
-  "loginTheme": "mta",
+  "loginTheme": "windup",
   "eventsEnabled": false,
   "eventsListeners": [
     "jboss-logging"
